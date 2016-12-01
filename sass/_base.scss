@@ -1,0 +1,18 @@
+$b2b2b: #2b2b2b;
+$indigo-700: #303F9F;
+$white: #fff;
+
+
+//Mixins
+@mixin flexbox($direction, $align, $justify, $wrap){
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+	flex-wrap: $wrap;
+}
+
+@mixin dimensions($width, $height){
+	width: $width;
+	height: $height;
+}

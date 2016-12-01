@@ -3,9 +3,69 @@
 @import '_normalize.scss';
 @import '_include-media.scss';
 
+body{
+  @include flexbox(row, flex-start, center ,wrap);
+  background: $b2b2b;
+  header{
+      @include dimensions(100%, 5vh);
+      margin: 0 0 30px 0;
+      text-align: center;
+      img{
+        float: left;
+        top: 0;
+      }
+
+      h1{
+        @include dimensions(100%, 36px);
+        display: inline;
+        margin: 0;
+        color:$white;
+      }
+    }
+  #todo-table{
+    @include flexbox(row, flex-start, center ,wrap);
+    @include dimensions(100vw, inherit);
+    @include media("screen", ">=tablet"){
+      @include dimensions(600px, inherit);
+
+    }
+    background: $indigo-700;
+    color: $white;
+    padding: 10px;
+    
+    form{
+      width: 100%;
+      #todoItem{
+        @include dimensions(68%, 40px);
+        border: none;
+        padding: 0 0 0 5px;
+      }
+      
+      #btnSubmit{
+        @include dimensions(29%, 40px);
+        @include media("screen", ">=tablet"){
+          @include dimensions(120px, 40px);
+          float: right;
+
+        }
+        background: $b2b2b;
+        color: $white;
+        border: none;
+        padding: 0;
+      }
+    }
+
+    ul{
+      @include dimensions(100%, inherit);
+      padding: 0;
+      list-style: none;
+    }
+    
+  }
+}
 
 /*media query*/
-@include media("screen", "<tablet"){
+@include media("screen", ">tablet"){
     
 
   }
