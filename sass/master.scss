@@ -1,0 +1,11 @@
+
+@import '_base.scss';
+@import '_normalize.scss';
+@import '_include-media.scss';
+
+
+/*media query*/
+@include media("screen", "<tablet"){
+    
+
+  }
