@@ -18,7 +18,7 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 module.exports = function(app){
 
-app.get('/todo', function(req, res){
+app.get('/', function(req, res){
 
     //get data from mlab database and send to view
     Todo.find({}, function(err, data){
@@ -28,7 +28,7 @@ app.get('/todo', function(req, res){
     
 });
 
-app.post('/todo', urlencodedParser, function(req, res){
+app.post('/', urlencodedParser, function(req, res){
     //get data from view and send to mlab nongodb
     var newTodo = Todo(req.body).save(function(err, data){
         if(err) throw err;
@@ -37,7 +37,7 @@ app.post('/todo', urlencodedParser, function(req, res){
     
 });
 
-app.delete('/todo/:item', function(req, res){
+app.delete('/:item', function(req, res){
     //delete requested item from mlab mongodb
 
     Todo.find({item: req.params.item.replace(/\-/g, " ")}).remove(function(err, data){
