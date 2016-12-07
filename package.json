@@ -16,6 +16,7 @@
     "grunt-contrib-watch": "^1.0.0"
   },
   "scripts": {
+    "start": "node app.js",
     "test": ""
   },
   "repository": {
