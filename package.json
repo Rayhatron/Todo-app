@@ -1,5 +1,5 @@
 {
-  "name": "todo app",
+  "name": "todo-app-",
   "version": "1.0.0",
   "description": "To-do app in html, scss, css and js",
   "main": "app.js",
@@ -28,5 +28,9 @@
   "bugs": {
     "url": ""
   },
-  "homepage": ""
+  "homepage": "",
+  "engines": {
+    "node": "6.9.1",
+    "npm": "3.10.8"
+  }
 }
