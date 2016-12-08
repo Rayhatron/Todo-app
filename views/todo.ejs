@@ -7,6 +7,7 @@
 	<title>Todo List App</title>
 
 	<link rel="stylesheet" href="/asserts/master.css" type="text/css" />
+    <script src="https://use.fontawesome.com/2d1c7583b1.js"></script>
     <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>-->
     <script src="/asserts/jquery-2.2.2.min.js"></script>
     <script src="/asserts/todo-list.js"></script>
@@ -20,19 +21,19 @@
 </head>
 <body>
     <header>
-        <img src="/asserts/logo.png" alt="Logo">
         <h1>Todo List App</h1>
     </header>
 
     <div id="todo-table">
         <form action="">
+            
             <input id="todoItem" type="text" name="item" placeholder="Add new item..." required />
-            <button id="btnSubmit" type="submit">Add item</button>
+            <button id="btnSubmit" type="submit"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i></button>
         </form>
 
         <ul>
             <% for(var i = 0; i < todos.length; i++){ %>
-                <li><%= todos[i].item %> </li>
+                <span><i class="fa fa-check-circle-o fa-2x" aria-hidden="true"></i><li><%= todos[i].item %> <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></li></span>
             <% } %>
         </ul>
     </div>
